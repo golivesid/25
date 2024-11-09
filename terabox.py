@@ -51,12 +51,6 @@ async def start_command(client, message):
     sticker_message = await message.reply_sticker("CAACAgUAAxkBAAEM-C9nDoZkNhInfzGG6M--XofgCZhRBAACqRMAAjkmmVb7f4FUMIlBFTYE")
     await asyncio.sleep(2)
     await sticker_message.delete()
-    user_mention = message.from_user.mention
-    reply_message = f"<b>ᴡᴇʟᴄᴏᴍᴇ, {user_mention}.\n\n🌟 ɪ ᴀᴍ ᴀ ᴛᴇʀᴀʙᴏx ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ʙᴏᴛ. sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛᴇʀᴀʙᴏx ʟɪɴᴋ ɪ ᴡɪʟʟ ᴅᴏᴡɴʟᴏᴀᴅ ᴡɪᴛʜɪɴ ғᴇᴡ sᴇᴄᴏɴᴅs ᴀɴᴅ sᴇɴᴅ ɪᴛ ᴛᴏ ʏᴏᴜ ✨.\n\n⮕ ꜱᴘᴇᴇᴅ: 99.99ᴍʙ/ꜱ \n⮕ ᴘʟᴀɴ: ᴜɴʟɪᴍɪᴛᴇᴅ</b>"
-    join_button = InlineKeyboardButton("ᴊᴏɪɴ ", url="https://t.me/Dramaship")
-    developer_button = InlineKeyboardButton("ᴀʟʟ ʙᴏᴛꜱ", url="https://t.me/Teraboxdev/12")
-    reply_markup = InlineKeyboardMarkup([[join_button, developer_button]])
-    video_file_id = "/app/Jet-Mirror.mp4"
     if os.path.exists(video_file_id):
         await client.send_video(
             chat_id=message.chat.id,
