@@ -1,3 +1,4 @@
+import telegram 
 import requests
 import aria2p
 from datetime import datetime
@@ -6,6 +7,7 @@ import asyncio
 import os, time
 import logging
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
 aria2 = aria2p.API(
     aria2p.Client(
@@ -176,10 +178,12 @@ async def upload_video(client, file_path, thumbnail_path, video_title, reply_msg
         collection_message = await client.send_video(
             chat_id=collection_channel_id,
             video=file,
-            caption=f"✨ {video_title}\n👤 ʟᴇᴇᴄʜᴇᴅ ʙʏ : {user_mention}\n📥 ᴜsᴇʀ ʟɪɴᴋ: tg://user?id={user_id}
-            [InlineKeyboardButton('ᴍᴏʀᴇ ᴠɪᴅᴇᴏꜱ', switch_inline_query_current_chat='')]",
+            keyboard = [[InlineKeyboardButton('ᴍᴏʀᴇ ᴠɪᴅᴇᴏꜱ', switch_inline_query_current_chat='')]]
+reply_markup = InlineKeyboardMarkup(keyboard)
+             caption=f"✨ {video_title}\n👤 ʟᴇᴇᴄʜᴇᴅ ʙʏ : {user_mention}\n📥 ᴜsᴇʀ ʟɪɴᴋ: tg://user?id={user_id}",
             thumb=thumbnail_path,
             progress=progress
+            reply_markup=reply_markup  
         )
         await client.copy_message(
             chat_id=message.chat.id,
