@@ -1,4 +1,3 @@
-import telegram 
 import requests
 import aria2p
 from datetime import datetime
@@ -7,7 +6,6 @@ import asyncio
 import os, time
 import logging
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
 aria2 = aria2p.API(
     aria2p.Client(
