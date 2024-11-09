@@ -48,9 +48,7 @@ app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 @app.on_message(filters.command("start"))
 async def start_command(client, message):
-    sticker_message = await message.reply_sticker("CAACAgUAAxkBAAEM-C9nDoZkNhInfzGG6M--XofgCZhRBAACqRMAAjkmmVb7f4FUMIlBFTYE")
     await asyncio.sleep(2)
-    await sticker_message.delete()
     if os.path.exists(video_file_id):
         await client.send_video(
             chat_id=message.chat.id,
