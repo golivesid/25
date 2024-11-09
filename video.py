@@ -77,7 +77,8 @@ async def download_video(url, reply_msg, user_mention, user_id):
         logging.error(f"Error handling message: {e}")
         buttons = [
             [InlineKeyboardButton("🚀 HD Video", url=hd_download_link)],
-            [InlineKeyboardButton("⚡ Fast Download", url=fast_download_link)]
+            [InlineKeyboardButton("⚡ Fast Download", url=fast_download_link)],
+            [InlineKeyboardButton('ᴍᴏʀᴇ ᴠɪᴅᴇᴏꜱ', switch_inline_query_current_chat='')]
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await reply_msg.reply_text(
