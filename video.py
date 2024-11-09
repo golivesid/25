@@ -177,7 +177,7 @@ async def upload_video(client, file_path, thumbnail_path, video_title, reply_msg
             chat_id=collection_channel_id,
             video=file,
             caption=f"✨ {video_title}\n👤 ʟᴇᴇᴄʜᴇᴅ ʙʏ : {user_mention}\n📥 ᴜsᴇʀ ʟɪɴᴋ: tg://user?id={user_id}
-            InlineKeyboardButton('ᴍᴏʀᴇ ᴠɪᴅᴇᴏꜱ', switch_inline_query_current_chat='')]",
+            [InlineKeyboardButton('ᴍᴏʀᴇ ᴠɪᴅᴇᴏꜱ', switch_inline_query_current_chat='')]",
             thumb=thumbnail_path,
             progress=progress
         )
