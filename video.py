@@ -179,6 +179,7 @@ async def upload_video(client, file_path, thumbnail_path, video_title, reply_msg
             caption=f"✨ {video_title}\n👤 ʟᴇᴇᴄʜᴇᴅ ʙʏ : {user_mention}\n📥 ᴜsᴇʀ ʟɪɴᴋ: tg://user?id={user_id}",
             thumb=thumbnail_path,
             progress=progress
+            (reply_markup =  InlineKeyboardMarkup([[ InlineKeyboardButton("ᴍᴏʀᴇ ᴠɪᴅᴇᴏꜱ", switch_inline_query_current_chat="text"), ]])
         )
         await client.copy_message(
             chat_id=message.chat.id,
