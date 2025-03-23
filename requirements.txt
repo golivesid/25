@@ -9,3 +9,8 @@ python-dotenv
 gunicorn
 gevent
 flask
+pyrogram
+certifi
+setuptools
+wheel
+ffmpeg
