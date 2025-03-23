@@ -1,4 +1,4 @@
-FROM hrishi2861/terabox:latest
+FROM python:3.10
 WORKDIR /app
 
 # Copy requirements.txt first to leverage caching
