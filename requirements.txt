@@ -11,6 +11,5 @@ gevent
 flask
 pyrogram
 certifi
-setuptools
 wheel
 ffmpeg
