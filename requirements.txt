@@ -9,7 +9,9 @@ python-dotenv
 gunicorn
 gevent
 flask
-pyrogram
+pyrofork
 certifi
 wheel
 ffmpeg
+BeautifulSoup
+setuptools
