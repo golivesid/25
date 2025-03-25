@@ -9,7 +9,7 @@ python-dotenv
 gunicorn
 gevent
 flask
-pyrofork
+pyrogram
 certifi
 wheel
 ffmpeg
